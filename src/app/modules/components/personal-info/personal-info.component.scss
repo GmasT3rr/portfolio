@@ -23,6 +23,7 @@
         display: table-caption;
         color: #c6c6c6;
         margin: 0;
+        animation: 1.5s move ease-out;
       }
       .description {
         font-family: "ArchivoBlack";
@@ -31,6 +32,8 @@
         margin: 0.75rem 0;
         -webkit-text-stroke: 1px #c6c6c6;
         background-color: inherit;
+        animation: 1.5s move ease-in-out;
+
       }
       .sub-description {
         font-size: 1rem;
@@ -38,6 +41,8 @@
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         color: #dbdbdb;
+        animation: 1.5s move ease-in;
+
       }
     }
 
@@ -46,6 +51,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       grid-gap: 50px;
+      animation: 1.75s move ease-out;
+
       a {
         width: auto;
         text-decoration: none;
@@ -162,3 +169,13 @@ button {
 //     }
 //   }
 // }
+@keyframes move {
+  0%,
+  25% {
+    transform: translateX(-200%);
+  }
+  75%,
+  100% {
+    transform: translateX(0%);
+  }
+}

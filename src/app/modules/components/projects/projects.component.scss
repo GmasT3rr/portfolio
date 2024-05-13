@@ -30,6 +30,7 @@
           animation: rotateYAnimation 1.5s ease-out;
           transition: all 500ms;
           position: relative;
+
           button {
             position: absolute;
             display: flex;
@@ -257,7 +258,7 @@
       }
     }
     .see-page {
-      left:0% !important;
+      left: 0% !important;
       top: 5% !important;
       height: fit-content;
     }
