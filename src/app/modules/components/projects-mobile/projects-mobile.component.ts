@@ -13,12 +13,17 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './projects-mobile.component.scss',
 })
 export class ProjectsMobileComponent {
-  faLinkedin=faLinkedin
-  faGithub=faGithub
-  faEnvelope=faEnvelope
-  faChevronUp=faChevronUp
+  faLinkedin = faLinkedin;
+  faGithub = faGithub;
+  faEnvelope = faEnvelope;
+  faChevronUp = faChevronUp;
 
   show: boolean = false;
+  coffeeShop: string = 'https://gmast3rr.github.io/coffee-shop/';
+  RDR2: string = 'https://gmast3rr.github.io/RDR2-Page/';
+  linkedIn: string = 'https://www.linkedin.com/in/lucas-ramallo-ab24a2218/';
+  github: string = 'https://github.com/GmasT3rr';
+  gmail: string = 'mailto:lucramallo14@gmail.com';
 
   dismissDisclaimer() {
     this.show = true;
@@ -27,7 +32,7 @@ export class ProjectsMobileComponent {
   scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Opcional: desplazamiento suave
+      behavior: 'smooth', // Opcional: desplazamiento suave
     });
   }
   scrollToSection(sectionId: string) {

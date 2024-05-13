@@ -13,13 +13,13 @@
     </p>
     <ul class="links">
       <li>
-        <a href=""> <fa-icon [icon]="faEnvelope"></fa-icon>Gmail</a>
+        <a [href]="gmail"> <fa-icon [icon]="faEnvelope"></fa-icon>Gmail</a>
       </li>
       <li>
-        <a href=""> <fa-icon [icon]="faLinkedin"></fa-icon>LinkedIn</a>
+        <a [href]="linkedIn"> <fa-icon [icon]="faLinkedin"></fa-icon>LinkedIn</a>
       </li>
       <li>
-        <a href=""> <fa-icon [icon]="faGithub"></fa-icon>GitHub</a>
+        <a [href]="github"> <fa-icon [icon]="faGithub"></fa-icon>GitHub</a>
       </li>
     </ul>
   </div>
@@ -27,7 +27,7 @@
     <h1 class="section-title">Projects</h1>
     <div class="grid">
       <div class="grid-item">
-        <h2 class="title">Coffee Shop</h2>
+        <h2 class="title"><a [href]="coffeeShop">Coffee Shop</a></h2>
         <p class="description">
           This is a huge project that consists of an online store for selling
           coffee. It's not finished yet, but you can check the progress made
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="grid-item">
-        <h2 class="title">Fanpage RDR 2</h2>
+        <h2 class="title"><a [href]="RDR2">Fanpage RDR 2</a></h2>
         <p class="description">
           I made this project to show my love for this game and also try some
           animations.
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="grid-item">
-        <h2 class="title">Coming soon...</h2>
+        <h2 class="title"><a>Coming soon...</a></h2>
         <p class="description">...</p>
       </div>
     </div>
