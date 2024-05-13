@@ -1,0 +1,71 @@
+<nav class="navbar">
+  <a  (click)="scrollToSection('Projects')">Projects</a>
+</nav>
+<div class="mobile">
+  <div class="personal-info">
+    <p class="intro">Hi, my name is</p>
+    <h1 class="name">Lucas Agustin Ramallo.</h1>
+    <h2 class="description">I create things for the web.</h2>
+    <p class="sub-description">
+      I'm a software developer specialized in crafting dynamic web applications
+      with a focus on performance and user experience, delivering unique and
+      useful products.
+    </p>
+    <ul class="links">
+      <li>
+        <a href=""> <fa-icon [icon]="faEnvelope"></fa-icon>Gmail</a>
+      </li>
+      <li>
+        <a href=""> <fa-icon [icon]="faLinkedin"></fa-icon>LinkedIn</a>
+      </li>
+      <li>
+        <a href=""> <fa-icon [icon]="faGithub"></fa-icon>GitHub</a>
+      </li>
+    </ul>
+  </div>
+  <section id="Projects" class="projects">
+    <h1 class="section-title">Projects</h1>
+    <div class="grid">
+      <div class="grid-item">
+        <h2 class="title">Coffee Shop</h2>
+        <p class="description">
+          This is a huge project that consists of an online store for selling
+          coffee. It's not finished yet, but you can check the progress made
+          anytime you want!
+        </p>
+        <div class="tecs">
+          <p>Angular</p>
+          <p>Typescript</p>
+          <p>SCSS</p>
+          <p>RxJs</p>
+          <p>Mobile</p>
+          <p>Desktop</p>
+          <p>Responsive</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <h2 class="title">Fanpage RDR 2</h2>
+        <p class="description">
+          I made this project to show my love for this game and also try some
+          animations.
+        </p>
+        <div class="tecs">
+          <p>Angular</p>
+          <p>Typescript</p>
+          <p>SCSS</p>
+          <p>Desktop</p>
+        </div>
+      </div>
+      <div class="grid-item">
+        <h2 class="title">Coming soon...</h2>
+        <p class="description">...</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <!-- <h1 class="section-title">Projects</h1> -->
+    <button (click)="scrollToTop()">
+      <fa-icon [icon]="faChevronUp"></fa-icon>
+    </button>
+  </footer>
+</div>

@@ -1,0 +1,164 @@
+.main {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: max-content;
+  z-index: 1;
+  .main-wrapped {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 3vh 5vw;
+    background-color: transparent;
+    .info-container {
+      width: 50%;
+      .name {
+        transition: 300ms;
+        font-family: "ArchivoBlack";
+        font-size: 3rem;
+        line-height: 0.9;
+        text-decoration: none;
+        color: transparent;
+        display: table-caption;
+        color: #c6c6c6;
+        margin: 0;
+      }
+      .description {
+        font-family: "ArchivoBlack";
+        line-height: 0.85;
+        font-size: 2.5rem;
+        margin: 0.75rem 0;
+        -webkit-text-stroke: 1px #c6c6c6;
+        background-color: inherit;
+      }
+      .sub-description {
+        font-size: 1rem;
+        margin: 2.25rem 0 2.75rem 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: #dbdbdb;
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      grid-gap: 50px;
+      a {
+        width: auto;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 10px;
+        color: #c6c6c6;
+        font-family: "ArchivoBlack";
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+button {
+  z-index: 999999;
+  cursor: pointer !important;
+  position: fixed;
+  top: 5vh;
+  left: 3vw;
+  z-index: 0;
+  border: 2px solid #c6c6c6;
+  color: #c6c6c6;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "ArchivoBlack";
+  background-color: transparent;
+  transition: all 300ms;
+  &:hover {
+    color: inherit;
+    background-color: #c6c6c6;
+  }
+}
+
+@media (max-width: 1440px) {
+  .main-wrapped {
+    .info-container {
+      width: 35% !important;
+    }
+    .name p {
+      font-size: 3rem !important;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .main {
+    display: none;
+  }
+}
+// @media (max-width: 1024px) {
+//   .main-wrapped {
+//     .links {
+//       flex-direction: column !important;
+//       grid-gap: 10px !important;
+//     }
+//     .name p {
+//       font-size: 2.5rem !important;
+//     }
+
+//     .links {
+//       a {
+//         display: inline !important;
+//         font-size: 1rem !important;
+//         fa-icon {
+//           margin-right: 10px;
+//           font-size: 1rem;
+//         }
+//       }
+//     }
+//   }
+// }
+// @media (max-width: 768px) {
+//   .main-wrapped {
+//     .links {
+//       flex-direction: column !important;
+//       grid-gap: 10px !important;
+//     }
+//     .name p {
+//       font-size: 2.5rem !important;
+//     }
+
+//     .links {
+//       a {
+//         display: inline !important;
+//         font-size: 1rem !important;
+//         fa-icon {
+//           margin-right: 10px;
+//           font-size: 1rem;
+//         }
+//       }
+//     }
+//   }
+// }
+// @media (max-width: 425px) {
+//   .main-wrapped {
+//     .links {
+//       flex-direction: column !important;
+//       grid-gap: 10px !important;
+//     }
+//     .name p {
+//       font-size: 1.75rem !important;
+//     }
+
+//     .links {
+//       a {
+//         display: inline !important;
+//         font-size: .75rem !important;
+//         fa-icon {
+//           margin-right: 10px;
+//           font-size: .75rem;
+//         }
+//       }
+//     }
+//   }
+// }

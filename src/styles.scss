@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/fonts.scss";
+
+body {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  background-color: #979797;
+}
+::-webkit-scrollbar-thumb {
+  background: #dedede;
+  border-radius: 10px;
+}

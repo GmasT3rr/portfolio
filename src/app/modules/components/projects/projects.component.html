@@ -1,0 +1,78 @@
+<section #main class="main">
+
+  <div class="main-wrapper">
+    <div class="projects-container">
+      <ul class="projects">
+        <li #items class="item" (click)="handleClick($event.currentTarget)">
+          <div class="item-container">
+            <a><span class="coffe-shop">COFFEE</span> SHOP</a>
+            <button (click)="destroy()">
+              Go back <fa-icon [icon]="faChevronRight"></fa-icon>
+            </button>
+            <button class="see-page" (click)="goToPage(coffeeShop)">
+              Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
+            </button>
+          </div>
+          <div class="info-container">
+            <p class="description">
+              This is a huge project that consists of an online store for
+              selling coffee. It's not finished yet, but you can check the
+              progress made anytime you want!
+            </p>
+            <div class="tecs">
+              <p>Angular</p>
+              <p>Typescript</p>
+              <p>SCSS</p>
+              <p>RxJs</p>
+              <p>Mobile</p>
+              <p>Desktop</p>
+              <p>Responsive</p>
+            </div>
+          </div>
+        </li>
+        <li #items class="item" (click)="handleClick($event.currentTarget)">
+          <div class="item-container">
+            <a><span class="RDR2">FANPAGE</span>RDR 2</a>
+            <button (click)="destroy()">
+              Go back <fa-icon [icon]="faChevronRight"></fa-icon>
+            </button>
+            <button class="see-page" (click)="goToPage(RDR2)">
+              Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
+            </button>
+          </div>
+          <div class="info-container">
+            <p class="description">
+              I made this project to show my love for this game and also try
+              some animations.
+            </p>
+            <div class="tecs">
+              <p>Angular</p>
+              <p>Typescript</p>
+              <p>SCSS</p>
+              <p>Desktop</p>
+            </div>
+          </div>
+        </li>
+        <li #items class="item" (click)="handleClick($event.currentTarget)">
+          <div class="item-container">
+            <a><span class="soon">COMING</span> SOON...</a>
+            <button (click)="destroy()">
+              Go back <fa-icon [icon]="faChevronRight"></fa-icon>
+            </button>
+            <!-- <button class="see-page" (click)="goToPage()">
+              Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
+            </button> -->
+          </div>
+          <div class="info-container">
+            <p class="description">Yet to come.</p>
+            <div class="tecs">
+              <p>...</p>
+              <p>...</p>
+              <p>...</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
