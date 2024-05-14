@@ -195,9 +195,10 @@
               justify-content: flex-end;
               align-items: flex-end;
               font-size: .75rem !important;
-                svg{
-                  border: 2px solid black !important;
-              }
+              svg{
+                border: 2px solid black !important;
+                background-color: black !important;
+            }
             }
           }
         }
