@@ -16,6 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faArrowUpRightDots,
   faChevronRight,
+  faDisplay,
+  faMobileScreen,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -32,7 +34,9 @@ export class ProjectsComponent {
 
   faChevronRight = faChevronRight;
   faArrowUpRightDots = faArrowUpRightDots;
-
+  faMobileScreen = faMobileScreen;
+  faDisplay = faDisplay;
+  
   coffeeShop:string = 'https://gmast3rr.github.io/coffee-shop/'
   RDR2:string = 'https://gmast3rr.github.io/RDR2-Page/'
 

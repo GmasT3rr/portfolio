@@ -3,7 +3,11 @@ import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronUp,
+  faDisplay,
+  faMobileScreen,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-projects-mobile',
@@ -17,6 +21,9 @@ export class ProjectsMobileComponent {
   faGithub = faGithub;
   faEnvelope = faEnvelope;
   faChevronUp = faChevronUp;
+
+  faMobileScreen = faMobileScreen;
+  faDisplay = faDisplay;
 
   show: boolean = false;
   coffeeShop: string = 'https://gmast3rr.github.io/coffee-shop/';
