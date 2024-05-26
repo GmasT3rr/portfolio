@@ -79,13 +79,14 @@
             transform: rotateY(-35deg) translateZ(0) scale(1);
           }
           .info-container {
+            margin-top: 10px;
             position: absolute;
             opacity: 0;
             right: 0;
             transition: 300ms all;
             min-height: 150px;
             min-width: 380px;
-            max-height: 75%;
+            max-height: 90%;
             max-width: 50%;
             height: auto;
             width: auto;
@@ -96,7 +97,7 @@
             .description {
               font-family: "ArchivoBlack";
               text-align: left;
-              font-size: 1.2rem;
+              font-size: 1rem;
               margin: 0 0 10px 0;
               padding: 0;
             }
@@ -168,7 +169,7 @@
 
             a,
             span {
-              transition: 300ms;
+              transition: all 300ms;
               font-family: "ArchivoBlack";
               font-size: 8rem;
               line-height: 0.9;
@@ -230,6 +231,7 @@
     border-radius: 10px;
     color: #c6c6c6;
     padding: 20px;
+    
   }
   button {
     background-color: red;

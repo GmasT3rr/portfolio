@@ -27,6 +27,8 @@ export class ProjectsMobileComponent {
 
   show: boolean = false;
   coffeeShop: string = 'https://gmast3rr.github.io/coffee-shop/';
+  foodApp:string = 'https://gmast3rr.github.io/food-app-fe/api/foods/search'
+
   RDR2: string = 'https://gmast3rr.github.io/RDR2-Page/';
   linkedIn: string = 'https://www.linkedin.com/in/lucas-ramallo-ab24a2218/';
   github: string = 'https://github.com/GmasT3rr';

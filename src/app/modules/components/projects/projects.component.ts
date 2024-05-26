@@ -38,6 +38,7 @@ export class ProjectsComponent {
   faDisplay = faDisplay;
   
   coffeeShop:string = 'https://gmast3rr.github.io/coffee-shop/'
+  foodApp:string = 'https://gmast3rr.github.io/food-app-fe/api/foods/search'
   RDR2:string = 'https://gmast3rr.github.io/RDR2-Page/'
 
   constructor(

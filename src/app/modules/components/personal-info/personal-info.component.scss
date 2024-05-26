@@ -17,13 +17,32 @@
         transition: 300ms;
         font-family: "ArchivoBlack";
         font-size: 3rem;
-        line-height: 0.9;
+        line-height: 1;
         text-decoration: none;
         color: transparent;
         display: table-caption;
         color: #c6c6c6;
         margin: 0;
         animation: 1.5s move ease-out;
+        //
+        color: transparent;
+        background: linear-gradient(
+          to left,
+          #d16ba5,
+          #c777b9,
+          #ba83ca,
+          #aa8fd8,
+          #9a9ae1,
+          #8aa7ec,
+          #79b3f4,
+          #69bff8,
+          #52cffe,
+          #41dfff,
+          #46eefa,
+          #5ffbf1
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
       }
       .description {
         font-family: "ArchivoBlack";
