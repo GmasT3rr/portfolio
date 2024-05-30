@@ -24,7 +24,6 @@ import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  @ViewChild('main') main!: ElementRef;
   @ViewChildren('items') items!: QueryList<ElementRef>;
   coffeeShop: string = 'https://gmast3rr.github.io/coffee-shop/';
   foodApp: string = 'https://gmast3rr.github.io/food-app-fe/api/foods/search';
@@ -83,28 +82,27 @@ export class ProjectsComponent {
   faMobileScreen = faMobileScreen;
   faDisplay = faDisplay;
 
-
-
   constructor(private renderer: Renderer2) {}
 
   destroy(event: Event, clickedItem: any): void {
     event.stopPropagation();
     this.items.forEach((element: ElementRef) => {
       const item = element.nativeElement;
-        this.renderer.removeClass(item, 'otherWasClicked');
-        this.renderer.removeClass(item, 'clicked');
-        this.renderer.removeStyle(item, 'margin-top');
-
+      this.renderer.removeClass(item, 'otherWasClicked');
+      this.renderer.removeClass(item, 'clicked');
+      this.renderer.removeStyle(item, 'margin-top');
     });
   }
 
   handleClick(clickedItem: any, index: number) {
-    this.renderer.setStyle(this.main.nativeElement, 'z-index', '3');
     let totalHeight = 0;
 
-    this.items.toArray().slice(0, index).forEach(itemRef => {
-      totalHeight += itemRef.nativeElement.offsetHeight;
-    });
+    this.items
+      .toArray()
+      .slice(0, index)
+      .forEach((itemRef) => {
+        totalHeight += itemRef.nativeElement.offsetHeight;
+      });
 
     this.items.forEach((element: ElementRef) => {
       const item = element.nativeElement;
@@ -113,7 +111,6 @@ export class ProjectsComponent {
         this.renderer.addClass(item, 'clicked');
         this.renderer.removeClass(item, 'otherWasClicked');
         this.renderer.setStyle(item, 'margin-top', `-${totalHeight}px`);
-
       } else {
         this.renderer.addClass(item, 'otherWasClicked');
       }
@@ -123,5 +120,4 @@ export class ProjectsComponent {
   goToPage(link: string) {
     window.open(link, '_blank');
   }
-
 }
