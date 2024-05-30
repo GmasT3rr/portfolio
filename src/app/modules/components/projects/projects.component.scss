@@ -18,6 +18,7 @@
         list-style: none;
         perspective: 100vw;
         min-height: 80vh;
+        z-index: 1;
         animation: translateYAnimation 2s cubic-bezier(0.15, 0.7, 0, 1) forwards;
         .item {
           display: flex;
