@@ -2,166 +2,32 @@
   <div class="main-wrapper">
     <div class="projects-container">
       <ul class="projects">
-        <li #items class="item" (click)="handleClick($event.currentTarget)">
+        <li #items *ngFor="let item of itemsList; let i = index" class="item rotatedYAnimationFromStart" (click)="handleClick($event.currentTarget, i)">
           <div class="item-container">
-            <a><span class="coffe-shop">FOOD</span> APP</a>
-            <button (click)="destroy()">
+            <a><span class="item-title">{{ item.title }}</span></a>
+            <button (click)="destroy($event, items)">
               Go back <fa-icon [icon]="faChevronRight"></fa-icon>
             </button>
-            <button class="see-page" (click)="goToPage(foodApp)">
-              Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
-            </button>
+            @if (item.page) {
+              <button class="see-page" (click)="goToPage(item.page)">
+                Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
+              </button>
+            }
           </div>
           <div class="info-container">
-            <p class="description">
-              As I gym bro, I sure need an app for registering my meals and keep
-              track of my macros, so why wouldn't I write code to solve my need?
-              Also, I made a Backend for this project which uses FatSecret API.
-            </p>
+            <p class="description">{{ item.description }}</p>
             <div class="tecs-container">
-              <div class="tec">
-                <p>Angular</p>
-                <object data="assets/svgs/angular.svg"></object>
+              <div class="tec" *ngFor="let tech of item.techs">
+                <p>{{ tech.name }}</p>
+                <object [data]="tech.iconPath |  safeUrl"></object>
               </div>
-              <div class="tec">
-                <p>NodeJs</p>
-                <object data="assets/svgs/nodejs-alt.svg"></object>
-              </div>
-              <div class="tec">
-                <p>RxJs</p>
-                <object data="assets/svgs/rxjs.svg"></object>
-              </div>
-              <div class="tec">
-                <p>Typescript</p>
-                <object data="assets/svgs/typescript.svg"></object>
-              </div>
-              <div class="tec">
-                <p>SCSS</p>
-                <object data="assets/svgs/sass.svg"></object>
-              </div>
-              <div class="tec">
+              <div class="tec" *ngIf="item.responsive">
                 <p>Responsive</p>
                 <div class="responsive">
                   <fa-icon [icon]="faDisplay"></fa-icon>
                   <fa-icon class="mobile" [icon]="faMobileScreen"></fa-icon>
                 </div>
               </div>
-              <!-- <div class="tec">
-                <p>Mobile</p>
-                <fa-icon [icon]="faMobileScreen"></fa-icon>
-              </div>
-              <div class="tec">
-                <p>Desktop</p>
-                <fa-icon [icon]="faDisplay"></fa-icon>
-              </div> -->
-            </div>
-          </div>
-        </li>
-        <li #items class="item" (click)="handleClick($event.currentTarget)">
-          <div class="item-container">
-            <a><span class="coffe-shop">COFFEE</span> SHOP</a>
-            <button (click)="destroy()">
-              Go back <fa-icon [icon]="faChevronRight"></fa-icon>
-            </button>
-            <button class="see-page" (click)="goToPage(coffeeShop)">
-              Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
-            </button>
-          </div>
-          <div class="info-container">
-            <p class="description">
-              This is a huge project that consists of an online store for
-              selling coffee. It's not finished yet, but you can check the
-              progress made anytime you want!
-            </p>
-            <div class="tecs-container">
-              <div class="tec">
-                <p>Angular</p>
-                <object data="assets/svgs/angular.svg"></object>
-              </div>
-              <div class="tec">
-                <p>Typescript</p>
-                <object data="assets/svgs/typescript.svg"></object>
-              </div>
-              <div class="tec">
-                <p>SCSS</p>
-                <object data="assets/svgs/sass.svg"></object>
-              </div>
-              <div class="tec">
-                <p>RxJs</p>
-                <object data="assets/svgs/rxjs.svg"></object>
-              </div>
-              <div class="tec">
-                <p>Responsive</p>
-                <div class="responsive">
-                  <fa-icon [icon]="faDisplay"></fa-icon>
-                  <fa-icon class="mobile" [icon]="faMobileScreen"></fa-icon>
-                </div>
-              </div>
-              <!-- <div class="tec">
-                <p>Mobile</p>
-                <fa-icon [icon]="faMobileScreen"></fa-icon>
-              </div>
-              <div class="tec">
-                <p>Desktop</p>
-                <fa-icon [icon]="faDisplay"></fa-icon>
-              </div> -->
-            </div>
-          </div>
-        </li>
-        <li #items class="item" (click)="handleClick($event.currentTarget)">
-          <div class="item-container">
-            <a><span class="RDR2">FANPAGE</span>RDR 2</a>
-            <button (click)="destroy()">
-              Go back <fa-icon [icon]="faChevronRight"></fa-icon>
-            </button>
-            <button class="see-page" (click)="goToPage(RDR2)">
-              Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
-            </button>
-          </div>
-          <div class="info-container">
-            <p class="description">
-              I made this project to show my love for this game and also try
-              some animations.
-            </p>
-            <div class="tecs-container">
-              <div class="tec">
-                <p>Angular</p>
-                <object data="assets/svgs/angular.svg"></object>
-              </div>
-              <div class="tec">
-                <p>Typescript</p>
-                <object data="assets/svgs/typescript.svg"></object>
-              </div>
-              <div class="tec">
-                <p>SCSS</p>
-                <object data="assets/svgs/sass.svg"></object>
-              </div>
-              <div class="tec">
-                <p>Responsive</p>
-                <div class="responsive">
-                  <fa-icon [icon]="faDisplay"></fa-icon>
-                  <fa-icon class="mobile" [icon]="faMobileScreen"></fa-icon>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li #items class="item" (click)="handleClick($event.currentTarget)">
-          <div class="item-container">
-            <a><span class="soon">COMING</span> SOON...</a>
-            <button (click)="destroy()">
-              Go back <fa-icon [icon]="faChevronRight"></fa-icon>
-            </button>
-            <!-- <button class="see-page" (click)="goToPage()">
-              Go to page <fa-icon [icon]="faArrowUpRightDots"></fa-icon>
-            </button> -->
-          </div>
-          <div class="info-container">
-            <p class="description">Yet to come.</p>
-            <div class="tecs">
-              <p>...</p>
-              <p>...</p>
-              <p>...</p>
             </div>
           </div>
         </li>

@@ -27,7 +27,6 @@
           transform-origin: right center;
           height: auto;
           transform: rotateY(-45deg) translateZ(0) scale(1);
-          animation: rotateYAnimation 1.5s ease-out;
           transition: all 500ms;
           position: relative;
 
@@ -51,6 +50,7 @@
             &.see-page {
               color: inherit;
               border: none;
+              display: none;
               background-image: linear-gradient(
                 to left,
                 #d16ba5,
@@ -187,7 +187,7 @@
                 content: "";
                 left: -2.5rem;
                 top: 5%;
-                height: 90%;
+                height: 40%;
                 background-color: #c6c6c6;
                 width: 2px;
                 color: #c6c6c6;
@@ -210,18 +210,18 @@
   }
 }
 
-.coffe-shop::after {
+.item-title::after {
   content: "2024";
 }
-.RDR2 {
-  display: inline-block;
-}
-.RDR2::after {
-  content: "2024";
-}
-.soon::after {
-  content: "TBA";
-}
+// .RDR2 {
+//   display: inline-block;
+// }
+// .RDR2::after {
+//   content: "2024";
+// }
+// .soon::after {
+//   content: "TBA";
+// }
 .clicked {
   transform: rotateY(0deg) translateZ(0) scale(1) !important;
   .info-container {
@@ -241,13 +241,22 @@
     &.see-page {
       right: 55% !important;
       width: fit-content !important;
+      display: flex !important;
+
     }
   }
 }
 
 .otherWasClicked {
-  animation: otherWasClicked 1s forwards !important;
+  transition: all 500ms;
+  opacity: 0;
+  transform: rotateY(-90deg) !important;
+  pointer-events: none;
 }
+.rotatedYAnimationFromStart {
+  animation: rotateYAnimation 1.5s ease-out;
+}
+
 
 @keyframes translateYAnimation {
   from {
@@ -262,7 +271,6 @@
 @keyframes rotateYAnimation {
   25% {
     opacity: 0;
-
     transform: rotateY(-90deg);
   }
   to {
@@ -271,24 +279,7 @@
     transform: rotateY(-45deg);
   }
 }
-@keyframes otherWasClicked {
-  25% {
-    opacity: 1;
 
-    transform: rotateY(-45deg);
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-    transform: rotateY(-90deg);
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
-}
 
 @media (max-width: 1440px) {
   .item {
