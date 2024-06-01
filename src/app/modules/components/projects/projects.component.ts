@@ -32,7 +32,7 @@ export class ProjectsComponent {
     {
       title: 'FOOD APP',
       description:
-        "As I gym bro, I sure need an app for registering my meals and keep track of my macros, so why wouldn't I write code to solve my need? Also, I made a Backend for this project which uses FatSecret API.",
+        "As a gym bro, I sure need an app for registering my meals and keep track of my macros, so why wouldn't I write code to solve my need? Also, I made a Backend for this project which uses FatSecret API.",
       techs: [
         { name: 'Angular', iconPath: 'assets/svgs/angular.svg' },
         { name: 'NodeJs', iconPath: 'assets/svgs/nodejs-alt.svg' },
