@@ -17,7 +17,7 @@
         position: relative;
         list-style: none;
         perspective: 100vw;
-        min-height: 80vh;
+        min-height: 35rem;
         animation: translateYAnimation 2s cubic-bezier(0.15, 0.7, 0, 1) forwards;
         .item {
           display: flex;
@@ -29,7 +29,6 @@
           transform: rotateY(-45deg) translateZ(0) scale(1);
           transition: all 500ms;
           position: relative;
-
           button {
             position: absolute;
             display: flex;
@@ -79,7 +78,7 @@
             transform: rotateY(-35deg) translateZ(0) scale(1);
           }
           .info-container {
-            margin-top: 10px;
+            margin: 2px;
             position: absolute;
             opacity: 0;
             right: 0;
@@ -94,6 +93,7 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+
             .description {
               font-family: "ArchivoBlack";
               text-align: left;
@@ -281,6 +281,19 @@
 }
 
 
+@media (max-width: 1650px) {
+  .item{
+    .info-container{
+      margin-top: 3rem !important;
+    }
+    button{
+      margin-bottom: -3.5rem !important;
+    }
+    .item-title{
+      font-size: 7.2rem !important;
+    }
+  }
+}
 @media (max-width: 1440px) {
   .item {
     .info-container {

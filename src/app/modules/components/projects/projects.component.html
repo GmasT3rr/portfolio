@@ -1,7 +1,7 @@
 <section #main class="main">
   <div class="main-wrapper">
     <div class="projects-container">
-      <ul class="projects">
+      <ul #projects class="projects">
         <li #items *ngFor="let item of itemsList; let i = index" class="item rotatedYAnimationFromStart" (click)="handleClick($event.currentTarget, i)">
           <div class="item-container">
             <a><span class="item-title">{{ item.title }}</span></a>

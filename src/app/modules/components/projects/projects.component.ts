@@ -24,6 +24,7 @@ import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  // @ViewChild('projects') projects!: ElementRef;
   @ViewChildren('items') items!: QueryList<ElementRef>;
   coffeeShop: string = 'https://gmast3rr.github.io/coffee-shop/';
   foodApp: string = 'https://gmast3rr.github.io/food-app-fe/api/foods/search';
@@ -95,6 +96,9 @@ export class ProjectsComponent {
   }
 
   handleClick(clickedItem: any, index: number) {
+
+    // const parent = this.projects.nativeElement
+
     let totalHeight = 0;
 
     this.items
@@ -115,6 +119,7 @@ export class ProjectsComponent {
         this.renderer.addClass(item, 'otherWasClicked');
       }
     });
+
   }
 
   goToPage(link: string) {
